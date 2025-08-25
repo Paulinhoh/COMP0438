@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskQuest - Todas as Telas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .screen-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem 1rem;
+            gap: 2rem;
+        }
+        .app-screen {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            min-height: 800px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 80px;
+        }
+        .nav-hub {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e7eb;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .nav-hub a { color: #9ca3af; }
+        .nav-hub a.active { color: #3b82f6; }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+
+    <div class="screen-container">
+        
+        <!-- Tela de Login -->
+        <div id="login-screen" class="app-screen">
+            <div class="flex flex-col items-center justify-center flex-grow">
+                <img src="https://placehold.co/150x150/e2e8f0/64748b?text=TaskQuest" alt="Logo TaskQuest" class="mb-6 rounded-full">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Bem-vindo(a)</h1>
+                <p class="text-center text-gray-500 mb-8">Gamifique sua saúde mental e construa uma rotina mais saudável!</p>
+                <input type="email" placeholder="E-mail" class="w-full p-3 mb-4 bg-gray-50 rounded-lg border border-gray-200">
+                <input type="password" placeholder="Senha" class="w-full p-3 mb-4 bg-gray-50 rounded-lg border border-gray-200">
+                <button class="w-full p-3 mb-4 font-semibold text-white bg-blue-600 rounded-lg shadow-lg">Entrar</button>
+                <a href="#" class="text-blue-500 text-sm mb-4 hover:underline">Esqueceu a senha?</a>
+                <p class="text-gray-500 text-sm">Não tem uma conta? <a href="#" class="text-blue-500 font-medium hover:underline">Cadastre-se</a></p>
+            </div>
+        </div>
+
+        <!-- Tela de Cadastro -->
+        <div id="cadastro-screen" class="app-screen">
+            <div class="flex flex-col justify-center flex-grow">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">Criar Conta</h1>
+                <p class="text-center text-gray-500 mb-8">Vamos começar sua jornada!</p>
+                <select class="w-full p-3 mb-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <option>Eu sou Jovem</option>
+                    <option>Eu sou Guardião</option>
+                    <option>Eu sou Psicólogo</option>
+                    <option>Eu sou Administrador</option>
+                </select>
+                <input type="text" placeholder="Nome Completo" class="w-full p-3 mb-4 bg-gray-50 rounded-lg border border-gray-200">
+                <input type="email" placeholder="E-mail" class="w-full p-3 mb-4 bg-gray-50 rounded-lg border border-gray-200">
+                <input type="password" placeholder="Senha" class="w-full p-3 mb-4 bg-gray-50 rounded-lg border border-gray-200">
+                <button class="w-full p-3 mb-4 font-semibold text-white bg-blue-600 rounded-lg shadow-lg">Cadastrar</button>
+                <p class="text-gray-500 text-sm text-center">Já tem uma conta? <a href="#" class="text-blue-500 font-medium hover:underline">Entre</a></p>
+            </div>
+        </div>
+
+        <!-- Tela Principal - Jovem -->
+        <div id="main-jovem-screen" class="app-screen">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Minha Rotina</h2>
+                <div class="flex items-center space-x-2"><span class="text-yellow-500 font-bold text-lg">XP: 250</span><span class="text-green-500 font-bold text-lg">Nível: 5</span></div>
+            </div>
+            <div class="bg-blue-100 p-4 rounded-xl mb-6 shadow-md">
+                <div class="flex justify-between items-center mb-2"><span class="text-blue-700 font-medium">Progresso Diário</span><span class="text-blue-700 font-bold">50%</span></div>
+                <div class="w-full bg-blue-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 50%;"></div></div>
+            </div>
+            <div class="flex-grow overflow-y-auto space-y-4">
+                <div class="bg-gray-50 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                    <div><h3 class="font-semibold text-gray-800">Exercício Matinal</h3><p class="text-sm text-gray-500">Prioridade: Alta</p></div>
+                    <button class="bg-green-500 text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
+                </div>
+                <div class="bg-green-100 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                    <div><h3 class="font-semibold text-green-700 line-through">Ler 15 minutos</h3><p class="text-sm text-green-500">Prioridade: Média</p></div>
+                    <button class="bg-green-500 text-white rounded-full p-2 cursor-default"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></button>
+                </div>
+            </div>
+            <button class="w-full p-3 mt-6 font-semibold text-white bg-green-600 rounded-lg shadow-lg">Adicionar Nova Tarefa</button>
+            <footer class="nav-hub">
+                <a href="#" class="active"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5.002L10 18.451l7.834-13.449A11.954 11.954 0 0110 1.944zM10 4.069a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 4.069zM10 12.125a.75.75 0 01.75.75v.008a.75.75 0 01-1.5 0v-.008a.75.75 0 01.75-.75z" clip-rule="evenodd" /></svg></a>
+            </footer>
+        </div>
+
+        <!-- Tela de Nova Tarefa -->
+        <div id="add-task-screen" class="app-screen">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8">Nova Tarefa</h2>
+            <label class="text-gray-600 mb-2 font-medium">Nome da Tarefa</label>
+            <input type="text" class="w-full p-3 mb-4 bg-white rounded-lg border border-gray-300">
+            <label class="text-gray-600 mb-2 font-medium">Descrição (Opcional)</label>
+            <textarea class="w-full p-3 mb-4 bg-white rounded-lg border border-gray-300 h-24 resize-none"></textarea>
+            <label class="text-gray-600 mb-2 font-medium">Prioridade</label>
+            <select class="w-full p-3 mb-4 bg-white rounded-lg border border-gray-300"><option>Alta</option></select>
+            <label class="text-gray-600 mb-2 font-medium">Data de Conclusão</label>
+            <input type="date" class="w-full p-3 mb-6 bg-white rounded-lg border border-gray-300">
+            <div class="flex-grow"></div>
+            <div class="flex space-x-4">
+                <button class="w-1/2 p-3 font-semibold text-gray-700 bg-gray-200 rounded-lg shadow-sm">Cancelar</button>
+                <button class="w-1/2 p-3 font-semibold text-white bg-blue-600 rounded-lg shadow-sm">Salvar Tarefa</button>
+            </div>
+        </div>
+
+        <!-- Tela da Biblioteca de Hábitos -->
+        <div id="habits-library-screen" class="app-screen">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Biblioteca de Hábitos</h2>
+            <div class="flex-grow overflow-y-auto space-y-4">
+                <div class="bg-purple-100 p-4 rounded-xl shadow-sm">
+                    <h3 class="text-lg font-semibold text-purple-800 mb-2">Bem-Estar Mental</h3>
+                    <div class="flex justify-between items-center bg-white p-3 rounded-lg"><span>Meditar por 5 minutos</span><button class="bg-purple-500 text-white rounded-full p-1.5"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg></button></div>
+                </div>
+            </div>
+            <footer class="nav-hub">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg></a>
+                <a href="#" class="active"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5.002L10 18.451l7.834-13.449A11.954 11.954 0 0110 1.944zM10 4.069a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 4.069zM10 12.125a.75.75 0 01.75.75v.008a.75.75 0 01-1.5 0v-.008a.75.75 0 01.75-.75z" clip-rule="evenodd" /></svg></a>
+            </footer>
+        </div>
+
+        <!-- Tela de Perfil -->
+        <div id="profile-screen" class="app-screen">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Meu Perfil</h2>
+            <div class="flex flex-col items-center mb-6"><img src="https://placehold.co/120x120/ffe4e1/ff7b8c?text=A1" class="rounded-full mb-4 border-4 border-blue-500"><h3 class="text-2xl font-bold text-gray-800">Jovem A</h3><p class="text-gray-500">Nível 5 - Explorador</p></div>
+            <div class="bg-gray-50 p-4 rounded-xl mb-6 shadow-sm">
+                <div class="flex justify-between items-center mb-2"><span>Progresso para Nível 6</span><span class="font-bold text-blue-600">250 / 1000 XP</span></div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-500 h-2.5 rounded-full" style="width: 25%;"></div></div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Conquistas</h3>
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div class="flex flex-col items-center"><div class="bg-yellow-100 p-3 rounded-full"><svg class="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><p class="text-xs mt-2">7 Dias de Foco</p></div>
+                </div>
+            </div>
+            <div class="flex-grow"></div>
+            <div class="w-full mt-4"><button class="w-full p-3 mb-4 font-semibold text-white bg-blue-600 rounded-lg shadow-lg">Editar Perfil</button><button class="w-full p-3 font-semibold text-gray-700 bg-gray-200 rounded-lg shadow-lg">Sair</button></div>
+            <footer class="nav-hub">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg></a>
+                <a href="#" class="active"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5.002L10 18.451l7.834-13.449A11.954 11.954 0 0110 1.944zM10 4.069a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 4.069zM10 12.125a.75.75 0 01.75.75v.008a.75.75 0 01-1.5 0v-.008a.75.75 0 01.75-.75z" clip-rule="evenodd" /></svg></a>
+            </footer>
+        </div>
+
+        <!-- Tela de Edição de Perfil -->
+        <div id="profile-customization-screen" class="app-screen">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Personalizar Perfil</h2>
+            <div class="flex flex-col items-center mb-6"><img src="https://placehold.co/120x120/e2e8f0/64748b?text=Avatar" alt="Avatar atual" class="rounded-full mb-4 border-4 border-blue-500"><h3 class="text-xl font-semibold text-gray-800">Avatar Atual</h3></div>
+            <label class="text-gray-600 mb-2 font-medium">Escolha seu Avatar</label>
+            <div class="flex justify-center space-x-4 mb-6"><img src="https://placehold.co/80x80/ffe4e1/ff7b8c?text=A1" class="border-blue-500 border-2 rounded-full"><img src="https://placehold.co/80x80/d1e2f3/5b84d4?text=A2" class="rounded-full"><img src="https://placehold.co/80x80/c1f0e2/4bc0a6?text=A3" class="rounded-full"></div>
+            <input type="text" placeholder="Nome de Usuário" value="Jovem A" class="w-full p-3 mb-6 bg-gray-50 rounded-lg border border-gray-200">
+            <div class="flex-grow"></div>
+            <div class="flex space-x-4">
+                <button class="w-1/2 p-3 font-semibold text-gray-700 bg-gray-200 rounded-lg shadow-lg">Cancelar</button>
+                <button class="w-1/2 p-3 font-semibold text-white bg-blue-600 rounded-lg shadow-lg">Salvar</button>
+            </div>
+        </div>
+
+        <!-- Tela de Apoio Profissional -->
+        <div id="professional-contacts-screen" class="app-screen">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Apoio Profissional</h2>
+            <p class="text-gray-600 mb-6">Se precisar de ajuda, não hesite em procurar um dos serviços abaixo.</p>
+            <div class="flex-grow overflow-y-auto space-y-4">
+                <a href="#" class="block bg-gray-50 p-4 rounded-xl shadow-sm">
+                    <h3 class="font-semibold text-blue-600">Centro de Valorização da Vida (CVV)</h3>
+                    <p class="text-sm text-gray-500">Apoio emocional e prevenção do suicídio.</p>
+                    <span class="text-sm text-blue-500 font-medium">Ligar agora: 188</span>
+                </a>
+                <a href="#" class="block bg-gray-50 p-4 rounded-xl shadow-sm">
+                    <h3 class="font-semibold text-blue-600">Serviço de Atendimento Psicológico Online</h3>
+                    <p class="text-sm text-gray-500">Plataforma para agendar sessões com psicólogos.</p>
+                    <span class="text-sm text-blue-500 font-medium">Acessar site</span>
+                </a>
+            </div>
+            <footer class="nav-hub">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg></a>
+                <a href="#" class="active"><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5.002L10 18.451l7.834-13.449A11.954 11.954 0 0110 1.944zM10 4.069a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 4.069zM10 12.125a.75.75 0 01.75.75v.008a.75.75 0 01-1.5 0v-.008a.75.75 0 01.75-.75z" clip-rule="evenodd" /></svg></a>
+            </footer>
+        </div>
+
+        <!-- Painel do Psicólogo -->
+        <div id="psychologist-panel-screen" class="app-screen">
+            <div class="flex justify-between items-center mb-6"><h2 class="text-2xl font-bold text-gray-800">Painel do Psicólogo</h2><button class="text-sm font-medium text-red-500">Sair</button></div>
+            <p class="text-gray-600 mb-6">Acompanhe o progresso dos jovens.</p>
+            <div class="flex-grow overflow-y-auto space-y-4">
+                <div class="bg-blue-50 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                    <div class="flex items-center space-x-3"><img src="https://placehold.co/60x60/e2e8f0/64748b?text=A1" class="rounded-full"><div><h3>Jovem A</h3><p>Progresso hoje: 50%</p></div></div>
+                    <button class="bg-blue-600 text-white rounded-lg px-3 py-1 text-sm">Ver Detalhes</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel do Guardião -->
+        <div id="guardian-panel-screen" class="app-screen">
+            <div class="flex justify-between items-center mb-6"><h2 class="text-2xl font-bold text-gray-800">Painel do Guardião</h2><button class="text-sm font-medium text-red-500">Sair</button></div>
+            <div class="flex items-center space-x-4 mb-6"><div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center font-bold">Jovem</div><div><h3>Progresso do Jovem A</h3><p>Última atualização: Hoje</p></div></div>
+            <div class="bg-gray-100 p-4 rounded-xl mb-4 shadow-sm">
+                <div class="flex items-center justify-between mb-2"><span>Tarefas Concluídas (Hoje)</span><span class="font-bold text-green-600">3/5</span></div>
+                <div class="w-full bg-gray-300 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 60%;"></div></div>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-xl mb-6 shadow-sm">
+                <h4 class="font-semibold">Sugerir um Hábito</h4><p>Incentive o Jovem A a adotar uma nova rotina.</p>
+                <input type="text" placeholder="Sugira um hábito..." class="w-full p-3 mt-2 bg-white rounded-lg border">
+                <button class="w-full p-3 mt-4 font-semibold text-white bg-blue-600 rounded-lg">Enviar Sugestão</button>
+            </div>
+            <div class="flex-grow"></div>
+            <p class="text-sm text-center text-gray-400">Este é um painel de visão geral para apoio.</p>
+        </div>
+
+        <!-- Painel de Administração -->
+        <div id="admin-panel-screen" class="app-screen">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Painel de Administração</h2>
+            <div class="flex-grow overflow-y-auto space-y-6">
+                <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                    <h3 class="font-semibold">Gerenciar Biblioteca de Hábitos</h3><p>Adicione, edite ou remova hábitos.</p>
+                    <button class="w-full p-3 mt-2 font-semibold text-white bg-blue-600 rounded-lg">Acessar</button>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                    <h3 class="font-semibold">Moderar Fóruns</h3><p>Gerencie postagens e usuários.</p>
+                    <button class="w-full p-3 mt-2 font-semibold text-white bg-blue-600 rounded-lg">Acessar</button>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl shadow-sm">
+                    <h3 class="font-semibold">Gerenciar Usuários</h3><p>Gerencie perfis de jovens, guardiões, etc.</p>
+                    <button class="w-full p-3 mt-2 font-semibold text-white bg-blue-600 rounded-lg">Acessar</button>
+                </div>
+            </div>
+            <div class="flex-grow"></div>
+            <button class="w-full p-3 mt-6 font-semibold text-gray-700 bg-gray-200 rounded-lg">Sair</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
